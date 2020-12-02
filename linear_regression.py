@@ -8,8 +8,7 @@ class LinearRegression:
         
     #cost function
     def computeCost(self,x, y, theta):
-        y.shape[1]
-        j=(1/(2*y.shape[1]))*np.sum(np.square((x * theta.T)-y))
+        j=(1/(2*len(x)))*np.sum(np.square((x * theta.T)-y))
         return j
     
     # gradient Descent
