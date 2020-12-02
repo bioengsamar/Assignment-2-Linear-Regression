@@ -1,2 +1,2 @@
-# ML_task_2
+# Assignment #2: Linear Regression
 ## Name: Samar Ibrahim Antar
