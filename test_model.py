@@ -20,16 +20,19 @@ def read_Data(path):
     
     #train & test data
     regressor = LinearRegression(learning_rate=0.1, n_iters=100)
-    regressor.fit(X_train, y_train)
+    weights_cost=regressor.fit(X_train, y_train)
     predictions = regressor.predict(X_test)
     RMSE=regressor.EvaluatePerformance(y_test,predictions) 
-    return RMSE
+    return RMSE,weights_cost
 
 
 if __name__ == "__main__":
     path1="univariateData.dat"
     path2="multivariateData.dat"
     
-    print('RMSE_univariateData=',read_Data(path1)) #[0.47056066]
-    print('RMSE_multivariateData=',read_Data(path2)) #[0.59231199]
-    
+    print('RMSE_univariateData=',read_Data(path1)[0]) #[0.47056066]
+    print('RMSE_multivariateData=',read_Data(path2)[0]) #[0.59231199]
+    print('weights for univariateData=',read_Data(path1)[1][0]) #[[0.04838084 0.84134196]]
+    print('weights for multivariateData=',read_Data(path2)[1][0]) #[[-0.00280975  0.89255356 -0.16432347]]
+    print('cost for univariateData=', read_Data(path1)[1][1][99]) #0.1584716080910898
+    print('cost for multivariateData=',read_Data(path2)[1][1][99]) #0.1257163358797318

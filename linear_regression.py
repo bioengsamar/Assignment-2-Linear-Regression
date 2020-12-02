@@ -34,7 +34,7 @@ class LinearRegression:
         y=np.matrix(y)
         
         # gradient descent
-        self.gradientDescent(x, y)
+        return self.gradientDescent(x, y)
         
      
     # test model
