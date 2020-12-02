@@ -30,6 +30,6 @@ if __name__ == "__main__":
     path1="univariateData.dat"
     path2="multivariateData.dat"
     
-    print('RMSE_univariateData=',read_Data(path1))
-    print('RMSE_multivariateData=',read_Data(path2))
+    print('RMSE_univariateData=',read_Data(path1)) #[0.47056066]
+    print('RMSE_multivariateData=',read_Data(path2)) #[0.59231199]
     

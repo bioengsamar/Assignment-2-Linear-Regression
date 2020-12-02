@@ -53,4 +53,3 @@ class LinearRegression:
         mean_error = sum_error / float(len(actual))
         RMSE=np.sqrt(mean_error)
         return RMSE
-       
